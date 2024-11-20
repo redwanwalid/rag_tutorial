@@ -41,10 +41,18 @@ def main():
     print(prompt)
 
     model = ChatOpenAI()
-    response_text = model.predict(prompt)
-
+    
+    # response_text = model.predict(prompt)
+    
+    # The method `BaseChatModel.predict` was deprecated in langchain-core 0.1.7 and will be removed in 1.0. Use invoke instead.
+    response_text = model.invoke(prompt)
+    
     sources = [doc.metadata.get("source", None) for doc, _score in results]
-    formatted_response = f"Response: {response_text}\nSources: {sources}"
+    # formatted_response = f"Response: {response_text}\nSources: {sources}"
+    
+    # With invoke, the output shows all the reneration response with response_metadata. It is cleaner to call .content with output as we are already calling some of the metadata as sources
+    formatted_response = f"Response: {response_text.content}\nSources: {sources}"
+    
     print(formatted_response)
 
 
