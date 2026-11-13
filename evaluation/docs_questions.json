@@ -1,0 +1,5 @@
+[
+  {"question": "What splitter divides documents into passages?", "evidence": "RecursiveCharacterTextSplitter"},
+  {"question": "How large are the default chunks?", "evidence": "1000 characters"},
+  {"question": "How can I inspect chunks without API calls?", "evidence": "ingest --preview"}
+]

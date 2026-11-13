@@ -1,4 +1,17 @@
+# Secrets and local environments
 .env
-chroma_*
-chroma
+.venv/
+.venv-*/
+
+# Generated vector storage
+.rag/
+
+# Python and tooling caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Local editor and OS files
+.idea/
 .DS_Store
