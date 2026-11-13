@@ -1,4 +1,4 @@
-# RAG interview demo
+# RAG demo
 
 An inspectable RAG pipeline over *Alice in Wonderland* or your own Markdown/text files.
 **LangChain** splits documents, **OpenAI** embeds passages and generates answers, and
